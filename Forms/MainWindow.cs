@@ -241,13 +241,6 @@ namespace Fitness
         {
             a = new AddEntry();
             a.messwert = m;
-            //a.InputDatum = m.MesswertDatum;
-            //a.InputGewicht = m.Gewicht;
-            //a.InputFett = m.FettAnteil;
-            //a.InputWasser = m.WasserAnteil;
-            //a.InputMuskel = m.MuskelAnteil;
-            //a.InputKnochen = m.KnochenMasse;
-
             a.Show();
             a.FormClosed += new FormClosedEventHandler(a_FormClosed);
         }
