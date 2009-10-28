@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.infoBar = new WinComponents.Controls.NotificationBar();
             this.SuspendLayout();
             // 
             // label1
@@ -155,11 +156,27 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Datum des Datensatzes";
             // 
+            // infoBar
+            // 
+            this.infoBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.infoBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoBar.Location = new System.Drawing.Point(15, -2);
+            this.infoBar.Margin = new System.Windows.Forms.Padding(5);
+            this.infoBar.Name = "infoBar";
+            this.infoBar.Padding = new System.Windows.Forms.Padding(10);
+            this.infoBar.PlaySoundWhenShown = false;
+            this.infoBar.Size = new System.Drawing.Size(329, 35);
+            this.infoBar.SmallImageList = null;
+            this.infoBar.TabIndex = 26;
+            this.infoBar.Visible = false;
+            this.infoBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.infoBar_MouseDown);
+            // 
             // AddEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 209);
+            this.Controls.Add(this.infoBar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -197,5 +214,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
+        private WinComponents.Controls.NotificationBar infoBar;
     }
 }

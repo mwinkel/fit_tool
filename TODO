@@ -1,4 +1,4 @@
 (german / english allowed)
 
-	- git unter windows einrichten?!
-	- danach erstmal groﬂes refactoring
+- infobar fixen, macht manchmal komische sachen (hide ohne klick)
+- xml klasse endlich mal cleanen und restlichen code anpassen

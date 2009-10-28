@@ -7,10 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-/*
- * TODO: Messagbox -> Infobar
- */
-
 namespace Fitness
 {
     public partial class AddEntry : Form
@@ -25,7 +21,7 @@ namespace Fitness
         }
         private void AddEntry_Load(object sender, EventArgs e)
         {
-            if (messwert.MesswertDatum != null)
+            if (messwert != null)
             {
                 input_datum.Value = messwert.MesswertDatum;
                 input_gewicht.Text = messwert.Gewicht.ToString();
@@ -53,15 +49,13 @@ namespace Fitness
                 {
                     successfull_saved = true;
                 }
-                
+
                 Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,
-                                "Falsches Format",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                infoBar.Text = ex.Message;
+                infoBar.Show(true);
             }
         }
         private void input_leave(object sender, EventArgs e)
@@ -70,6 +64,11 @@ namespace Fitness
 
             if (tb.Text.Length > 2)
                 tb.Text = tb.Text.Insert(tb.Text.Length - 1, ",");
+        }
+
+        private void infoBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            infoBar.Hide(true);
         }
     }
 }
